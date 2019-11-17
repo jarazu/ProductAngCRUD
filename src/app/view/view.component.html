@@ -1,0 +1,30 @@
+<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Slug</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let list of products">
+            <td>{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <td>{{list.slug}}</td>
+            <td>{{list.description}}</td>
+            <td>{{list.price}}</td>
+            <td><button class="btn btn-primary" (click)="edit(list)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="delete(list)">Delete</button></td>
+          </tr>
+        </tbody>
+</table>
+
+<a [routerLink]="'/add'" class="btn btn-primary btn-lg text-center">Go To Add Page</a>
+
+
+
+

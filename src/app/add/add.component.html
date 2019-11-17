@@ -1,0 +1,32 @@
+<div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h3>Product Insert Form</h3>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Product Name</label>
+                            <input type="text" formControlName="name" class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Product Slug</label>
+                            <input type="text" formControlName="slug" class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Product description</label>
+                            <input type="text" formControlName="description" class="form-control"  />
+                        </div>
+                        <div class="form-group">
+                            <label>Product price</label>
+                            <input type="number" formControlName="price" class="form-control"  />
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn btn-primary">Save</button> &nbsp;
+                            <a class="btn btn-primary" [routerLink]="'/view'">Go To View Page</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
